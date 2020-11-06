@@ -1,0 +1,12 @@
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/dao/FormatoDao.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/entity/Formato.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/entity/Recorte.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/HibernateUtils.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/dao/FormatoDao2.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/dao/GenericDao.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/controller/FormatoController.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/dao/DocumentoDao.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/entity/Documento.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/controller/Login.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/util/ControllerUtil.java
+/home/esneider/eclipse-workspace202006/projectjsf/src/com/inetum/documentos/controller/DocumentoController.java

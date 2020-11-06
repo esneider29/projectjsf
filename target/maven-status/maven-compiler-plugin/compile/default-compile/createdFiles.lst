@@ -1,0 +1,12 @@
+com/inetum/documentos/dao/FormatoDao.class
+com/inetum/documentos/controller/Login.class
+com/inetum/documentos/entity/Formato.class
+com/inetum/documentos/dao/DocumentoDao.class
+com/inetum/documentos/util/ControllerUtil.class
+com/inetum/documentos/controller/FormatoController.class
+com/inetum/documentos/controller/DocumentoController.class
+com/inetum/documentos/HibernateUtils.class
+com/inetum/documentos/entity/Recorte.class
+com/inetum/documentos/entity/Documento.class
+com/inetum/documentos/dao/GenericDao.class
+com/inetum/documentos/dao/FormatoDao2.class

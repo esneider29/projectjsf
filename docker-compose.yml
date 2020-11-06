@@ -1,0 +1,29 @@
+ version: '2.1'
+
+ services:
+  tomcat:
+    build: .
+    mem_limit: 350m    
+    depends_on:
+      - postgresdb
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    links:
+      - postgresdb
+
+  postgresdb:
+    image: postgres
+    mem_limit: 350m
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=documento
+    ports:
+      - "5432:5432"
+    volumes:
+     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+

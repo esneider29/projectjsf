@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template.xhtml">
+
+
+	<ui:define name="title">
+		<h:outputText value="Documentos"></h:outputText>
+	</ui:define>
+
+	<ui:define name="body">
+		<h:form id="DocumentoListForm">
+			<p:panel header="Lista de documentos">
+				<p:dataTable id="datalist" value="#{documentoController.items}"
+					var="item" selectionMode="single"
+					selection="#{documentoController.selected}" paginator="true"
+					rowKey="#{item.id}" rows="10" rowsPerPageTemplate="10,20,30,40,50">
+
+					<p:ajax event="rowSelect"
+						update="createButton viewButton deleteButton" />
+					<p:ajax event="rowUnselect"
+						update="createButton viewButton deleteButton" />
+
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="ID" />
+						</f:facet>
+						<h:outputText value="#{item.id}" />
+					</p:column>
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="ruta" />
+						</f:facet>
+						<h:outputText value="#{item.ruta}" />
+					</p:column>
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="formato" />
+						</f:facet>
+						<h:outputText value="#{item.formato.nombre}" />
+					</p:column>
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="fecha y hora de creacion" />
+						</f:facet>
+						<h:outputText value="#{item.fechahoracreacion}">
+							<f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+						</h:outputText>
+					</p:column>
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="fecha y hora de modificacion" />
+						</f:facet>
+						<h:outputText value="#{item.fechahoramodificacion}">
+							<f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+						</h:outputText>
+					</p:column>
+					<f:facet name="footer">
+						<p:commandButton id="createButton" icon="ui-icon-plus"
+							value="crear"
+							actionListener="#{documentoController.prepareCreate}"
+							update=":DocumentoCreateForm"
+							oncomplete="PF('DocumentoCreateDialog').show()" />
+							
+						<p:commandButton id="viewButton" icon="ui-icon-search"
+							value="ver" update=":DocumentoViewForm"
+							oncomplete="PF('DocumentoViewDialog').show()"
+							disabled="#{empty documentoController.selected}" />
+
+						<!-- 						<p:commandButton id="editButton" icon="ui-icon-pencil" -->
+						<!-- 							value="editar" update=":DocumentoEditForm" -->
+						<!-- 							oncomplete="PF('DocumentoEditDialog').show()" -->
+						<!-- 							disabled="#{empty documentoController.selected}" /> -->
+
+						<p:commandButton id="deleteButton" icon="ui-icon-trash"
+							value="borrar" actionListener="#{documentoController.destroy}"
+							update=":growl,datalist"
+							disabled="#{empty documentoController.selected}" />
+
+					</f:facet>
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+
+		<ui:include src="Create.xhtml" />
+		<!-- 		<ui:include src="Edit.xhtml" /> -->
+		<ui:include src="View.xhtml" />
+	</ui:define>
+</ui:composition>
+</html>

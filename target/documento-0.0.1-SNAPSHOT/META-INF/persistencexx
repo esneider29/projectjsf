@@ -1,0 +1,22 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <persistence-unit name="documentosPU" -->
+<!-- 	transaction-type="RESOURCE_LOCAL"> -->
+<!-- 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+<!-- 	<description>persistencia para documentos</description> -->
+<!-- 	<class>com.inetum.documentos.entity.Formato</class> -->
+<!-- 	<class>com.inetum.documentos.entity.Documento</class> -->
+<!-- 	<class>com.inetum.documentos.entity.Recorte</class> -->
+<!-- 	<exclude-unlisted-classes>true</exclude-unlisted-classes> -->
+<!-- 	<properties> -->
+<!-- 		<property name="hibernate.dialect" -->
+<!-- 			value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+<!-- 		<property name="hibernate.hbm2ddl.auto" value="update" /> -->
+<!-- 		<property name="javax.persistence.jdbc.driver" -->
+<!-- 			value="org.postgresql.Driver" /> -->
+<!-- 		<property name="javax.persistence.jdbc.url" -->
+<!-- 			value="jdbc:postgresql://localhost:5432/documento" /> -->
+<!-- 		<property name="javax.persistence.jdbc.user" value="postgres" /> -->
+<!-- 		<property name="javax.persistence.jdbc.password" -->
+<!-- 			value="123456" /> -->
+<!-- 	</properties> -->
+<!-- </persistence-unit> -->
